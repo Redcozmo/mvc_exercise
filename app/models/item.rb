@@ -20,4 +20,12 @@ class Item < ApplicationRecord
       original_price
     end
   end
+
+  def self.average_price
+    tot = 0.to_f
+    all.find_each do |item|
+      tot += item.original_price
+    end
+    (tot / count ).round(2)
+  end
 end
