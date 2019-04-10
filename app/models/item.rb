@@ -1,11 +1,9 @@
 # frozen_string_literal: true
-
 # == Schema Information
 #
 # Table name: items
 #
 #  id                  :bigint(8)        not null, primary key
-#  name                :string           not null
 #  discount_percentage :integer          default(0)
 #  has_discount        :boolean          default(FALSE)
 #  name                :string
@@ -24,6 +22,9 @@ class Item < ApplicationRecord
                                   numericality: { only_integer: true,
                                                   greater_than_or_equal_to: 0,
                                                   less_than: 100 }
+
+  has_many :categorizations, dependent: :destroy
+  has_many :items, through: :categorizations
 
   def price
     if has_discount
