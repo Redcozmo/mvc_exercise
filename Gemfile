@@ -28,7 +28,9 @@ group :development, :test do
   gem 'faker', '~> 1.8', '>= 1.8.7'
   gem 'pry-byebug', '~> 3.6'
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
+  gem 'rubocop-performance'
   gem 'sandi_meter', '~> 1.2'
+  gem 'table_print'
 end
 
 group :development do
