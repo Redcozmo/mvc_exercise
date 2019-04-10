@@ -30,7 +30,6 @@ RSpec.describe Item, type: :model do
 
   describe 'Validation' do
     it { is_expected.to validate_presence_of(:original_price) }
-    it { is_expected.to validate_presence_of(:has_discount) }
     it { is_expected.to validate_presence_of(:discount_percentage) }
   end
 

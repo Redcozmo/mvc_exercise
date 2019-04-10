@@ -19,7 +19,7 @@
   )
 
   if item.has_discount
-    item.discount_percentage = rand(9) * 10
+    item.discount_percentage = rand(1..9) * 10
     item.save
   end
 
