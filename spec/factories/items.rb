@@ -19,8 +19,15 @@ FactoryBot.define do
 
     trait :with_discount do
       has_discount { true }
+      discount_percentage { rand(9) * 10 }
+    end
+
+    trait :without_discount do
+      has_discount { false }
+      discount_percentage { 0 }
     end
 
     factory :item_with_discount, traits: %i[with_discount]
+    factory :item_without_discount, traits: %i[without_discount]
   end
 end
