@@ -12,13 +12,13 @@
 ## Guidelines
 
    :raising_hand: **Ask for help !**
-   This exercice is very guided. However, it important that you remember to ask for help if you're really stuck on an issue (specially if it's a configuration type !). You are a member of THP community. You have teammates and there is a slack channel dedicated to this course. 
+   This exercice is very guided. However, it important that you remember to ask for help if you're really stuck on an issue (specially if it's a configuration type !). You are a member of THP community. You have teammates and there is a slack channel dedicated to this course.
 
    :gun: **Don't change the configuration files !**
    This configuration is partly dockerized and is supposed to be quite universal. At some point, it will be important for you to understand how all this works but the time is not now. Feel free to change anything you want and experiment on your side projects, it is part of the learning process. However, we strongly discourage you to stray from this readme in terms of application setup. In any case, we will not waste time debugging people who decided to procede differently from our instructions.
 
    :dizzy_face: **Do not delve too deeply in the documentation !**
-   We expect you to be curious and we definitely expect you to go deeper in the weekly concepts. A lot of this is new and you will want to know it all. However, we recommand that you take your time or **it will drive you crazy**. Please, **FOCUS** on the tasks that are described. They are already a handful ! Our method consists in learning by doing, it is much less painful. 
+   We expect you to be curious and we definitely expect you to go deeper in the weekly concepts. A lot of this is new and you will want to know it all. However, we recommand that you take your time or **it will drive you crazy**. Please, **FOCUS** on the tasks that are described. They are already a handful ! Our method consists in learning by doing, it is much less painful.
 
 ## Cloning the repository
 
@@ -50,12 +50,12 @@ If you're reading this, it means that something is wrong in your docker configur
 1. edit the **docker-compose.yml** file :
 
    In the case of a postgres issue (it's generally postgres :angel:), you will have to change the port on your computer (that's the one on the left, after the first ":"), to the value you picked during the first step.
-   - original postgres setup : `- 127.0.0.1:5434:5432` 
+   - original postgres setup : `- 127.0.0.1:5434:5432`
    - modified postgres setup : `- 127.0.0.1:5435:5432`
 
 2. Tell rails where to look for the service :
 
-   Depending on the service you modified, you will have to edit a file or another in your rails application. If you modified the port for the puma server to 3001 instead of 3000, then you will have to modify the **puma.rb** file consequently. 
+   Depending on the service you modified, you will have to edit a file or another in your rails application. If you modified the port for the puma server to 3001 instead of 3000, then you will have to modify the **puma.rb** file consequently.
 
    In the previous example, you modified the ports for your postgres container. It means that in rails, you will have to modify the following line in your **database.yml** file :
    - original postgres setup :
@@ -72,3 +72,5 @@ If you're reading this, it means that something is wrong in your docker configur
 
 We have setup the app, it's time to code ! :shipit:
 All the instructions are given in the mvc directory in the formation github.
+
+test commit
