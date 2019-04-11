@@ -2,7 +2,7 @@
 
 module Administration
   class ItemsController < AdministrationController
-    before_action :set_post, only: [:update]
+    before_action :set_item, only: [:update]
 
     def index
       @emails = User.emails_of_all_users
@@ -21,7 +21,7 @@ module Administration
 
     private
 
-    def set_post
+    def set_item
       @item = Item.find(params[:id])
     end
   end
