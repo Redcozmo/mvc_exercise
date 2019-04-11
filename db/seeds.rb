@@ -12,10 +12,12 @@
 #  updated_at          :datetime         not null
 #
 
+p "Seeding items........."
 1.upto(10) do |i|
   item = Item.create!(
     original_price: Faker::Number.decimal(2),
-    has_discount: Faker::Boolean.boolean
+    has_discount: Faker::Boolean.boolean,
+    name: Faker::Commerce.product_name
   )
 
   if item.has_discount
@@ -25,3 +27,15 @@
 
   p "ITEM #{i} : créé"
 end
+
+p "Seeddig categories........."
+1.upto(10) do |i|
+  Category.create!(
+    name: Faker::Commerce.material,
+    description: Faker::Commerce.color
+  )
+
+  p "CATEGORY #{i} : créée"
+end
+
+post.tags << Tag.all.sample

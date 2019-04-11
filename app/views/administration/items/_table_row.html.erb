@@ -1,6 +1,7 @@
 <%= form_for item, url: administration_item_url(item.id), html: {class: ""} do |f| %>
 	<tr>
 		<td> <%= item.id %></td>
+		<td> <%= item.name %></td>
 		<td> <%= item.has_discount %></td>
 		<td> <%= item.original_price %></td>
 		<td>
