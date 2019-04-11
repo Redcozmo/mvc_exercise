@@ -19,16 +19,10 @@
 
 			<li class="sidebar-item">
 
-          <% if user_signed_in? %>
+          <% if admin_signed_in? %>
             <div class="align-middle">
-              <%= link_to 'Déconnexion', destroy_user_session_path, class: "sidebar-link", method: :delete %>
-              <%= link_to 'Profil', edit_user_registration_path, class: "sidebar-link" %>
-            </div>
-
-          <% else %>
-            <div class="align-middle">
-              <%= link_to 'Connexion', new_user_session_path, class: "sidebar-link" %>
-              <%= link_to 'Inscription', new_user_registration_path, class: "sidebar-link" %>
+              <%= link_to 'Déconnexion', destroy_admin_session_path, class: "sidebar-link", method: :delete %>
+              <%= link_to 'Profil', edit_admin_registration_path, class: "sidebar-link" %>
             </div>
           <% end %>
 
