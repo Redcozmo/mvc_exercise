@@ -1,0 +1,43 @@
+<nav class="sidebar sidebar-sticky">
+	<div class="sidebar-content">
+
+		<%= link_to root_path, class: "sidebar-brand" do %>
+      <p class="align-middle text-center">
+	      <%= image_tag "logo.svg", size: "75x75", class: "rounded rounded-circle", alt: "logo" %>
+			</p>
+		<% end %>
+
+		<ul class="sidebar-nav">
+
+			<li class="sidebar-item">
+		    <%= link_to items_path, class: "sidebar-link" do %>
+          <span class="align-middle">
+          	Items
+          </span>
+        <% end %>
+			</li>
+
+			<li class="sidebar-item">
+
+          <% if user_signed_in? %>
+            <div class="align-middle">
+							<div class="sidebar-link"> <%= current_user.email %> </div>
+              <%= link_to 'Déconnexion', destroy_user_session_path, class: "sidebar-link", method: :delete %>
+              <%= link_to 'Profil', edit_user_registration_path, class: "sidebar-link" %>
+            </div>
+
+          <% else %>
+            <div class="align-middle">
+              <%= link_to 'User Connexion', new_user_session_path, class: "sidebar-link" %>
+              <%= link_to 'User Inscription', new_user_registration_path, class: "sidebar-link" %>
+							<div class="dropdown-divider"></div>
+							<%= link_to 'Admin Connexion', new_admin_session_path, class: "sidebar-link" %>
+            </div>
+          <% end %>
+
+        </li>
+
+		</ul>
+
+	</div>
+</nav>

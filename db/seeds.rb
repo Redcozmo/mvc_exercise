@@ -28,7 +28,7 @@ p "Seeding items........."
   p "ITEM #{i} : créé"
 end
 
-p "Seeddig categories........."
+p "Seeding categories........."
 1.upto(10) do |i|
   Category.create!(
     name: Faker::Commerce.material,
@@ -38,4 +38,10 @@ p "Seeddig categories........."
   p "CATEGORY #{i} : créée"
 end
 
-post.tags << Tag.all.sample
+p "Seeding one admin........."
+Admin.create(
+  email: 'superadmin@proton.fr',
+  password: 'superpassword',
+  password_confirmation: 'superpassword',
+)
+p "ADMIN #{Admin.first.email} : créé"
