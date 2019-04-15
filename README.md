@@ -72,5 +72,3 @@ If you're reading this, it means that something is wrong in your docker configur
 
 We have setup the app, it's time to code ! :shipit:
 All the instructions are given in the mvc directory in the formation github.
-
-test commit
